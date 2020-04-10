@@ -18,6 +18,12 @@ function Admin(username, email, title) {
   this.title = title;
 }
 
+Admin.prototype = Object.create(User.prototype);
+
+Admin.prototype.deleteUser = function (users) {
+  // delete user
+};
+
 const userOne = new User('mario', 'mario@gmail.com');
 const superUser = new Admin('shaun', 'shaun@gmail.com', 'ninaj-black-belt');
 console.log(userOne, superUser);
