@@ -39,15 +39,22 @@ class User {
   }
 }
 
-// craete new user and method chaining
-const userOne = new User('max', 'maximilina@gmail.com');
-userOne.login().logout();
-userOne.incScore();
+class Admin extends User {
+  deleteUser(userOne) {
+    users = users.filter((user) => {
+      return user.username !== userOne.username;
+    });
   }
 }
+// craete new user and method chaining
+const userOne = new User('max', 'max@gmail.com');
+const userTwo = new User('shaun', 'shaun@gmail.com');
+const userThree = new User('mario', 'mario@gmail.com');
+const adminOne = new Admin();
 
-
-
+let users = [userOne, userTwo, userThree];
+adminOne.deleteUser(userOne);
+console.log(users);
 // new keyword
 // 1 - it cretaes a new empty object {}
 // 2 - it binds the value of 'this' to the new empty object
