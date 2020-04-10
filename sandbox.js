@@ -43,7 +43,10 @@ class User {
 const userOne = new User('max', 'maximilina@gmail.com');
 userOne.login().logout();
 userOne.incScore();
-console.log(userOne);
+  }
+}
+
+
 
 // new keyword
 // 1 - it cretaes a new empty object {}
