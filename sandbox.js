@@ -40,6 +40,10 @@ class User {
 }
 
 class Admin extends User {
+  constructor(username, email, title) {
+    super(username, email);
+    this.title = title;
+  }
   deleteUser(userOne) {
     users = users.filter((user) => {
       return user.username !== userOne.username;
@@ -50,7 +54,7 @@ class Admin extends User {
 const userOne = new User('max', 'max@gmail.com');
 const userTwo = new User('shaun', 'shaun@gmail.com');
 const userThree = new User('mario', 'mario@gmail.com');
-const adminOne = new Admin();
+const adminOne = new Admin('sujan', 'sujan@gmail.com', 'blcak-belt-ninja');
 
 let users = [userOne, userTwo, userThree];
 adminOne.deleteUser(userOne);
