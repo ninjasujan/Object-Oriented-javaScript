@@ -13,8 +13,14 @@ User.prototype.logout = function () {
   console.log(`${this.username} is logged out`);
 };
 
+function Admin(username, email, title) {
+  User.call(this, username, email);
+  this.title = title;
+}
+
 const userOne = new User('mario', 'mario@gmail.com');
-console.log(userOne);
+const superUser = new Admin('shaun', 'shaun@gmail.com', 'ninaj-black-belt');
+console.log(userOne, superUser);
 
 userOne.login();
 userOne.logout();
