@@ -23,11 +23,30 @@ class User {
   constructor(username, email) {
     this.username = username;
     this.email = email;
+    this.score = 0;
+  }
+  login() {
+    console.log(`${this.username} is just loggedin`);
+    return this;
+  }
+  logout() {
+    console.log(`${this.username} is just logged out`);
+    return this;
+  }
+  incScore() {
+    this.score += 1;
+    console.log(`${this.username} has a score ${this.score}`);
   }
 }
 
+// craete new user and method chaining
 const userOne = new User('max', 'maximilina@gmail.com');
-console.log(userOne);
+userOne.login().logout();
+userOne.incScore();
+  }
+}
+
+
 
 // new keyword
 // 1 - it cretaes a new empty object {}
