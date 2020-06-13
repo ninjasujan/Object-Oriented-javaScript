@@ -30,3 +30,7 @@ console.log(userOne, superUser);
 
 userOne.login();
 userOne.logout();
+
+const User = new userOne({
+  isAdmin: 'hey I am admin',
+});
